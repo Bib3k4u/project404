@@ -92,23 +92,7 @@ label{
 
             </tr>
 
-            <tr>
-                <td>
-                    hello
-
-                </td>
-
-            </tr>
-            <tr>
-                <td>
-                    hello
-
-                </td>
-
-
-            </tr>
-
-
+            
 
             @foreach($updateProgram as $data) <tr>
                 <td>{{$data['id']  }}</td>

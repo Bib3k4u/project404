@@ -303,7 +303,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{asset('update_program')}}" class="nav-link">
+            <a href="{{'updateprogram'}}" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
                 update program
@@ -311,10 +311,10 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../kanban.html" class="nav-link">
+            <a href="{{'student_list_upload'}}" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
               <p>
-                Kanban Board
+                student_list_update
               </p>
             </a>
           </li>
