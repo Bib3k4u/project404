@@ -27,7 +27,7 @@ table{
     font-size:large;
     
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 93%;
+    width: 90%;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 80px;
@@ -71,3 +71,37 @@ table, th, td {
 tr:nth-child(even) {
     background-color: #d9f0f0;
   }
+
+  #alertbox{
+    width: 30%;
+    background-color: rgb(149, 230, 122);
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 400px;
+
+  }
+  .editbutton{
+    display: flex;
+  }
+
+ .delete{
+    background-color: rgb(223, 64, 64);
+    border-radius: 4px;
+
+    
+ }
+ .delete :hover{
+    background-color: rgb(215, 35, 35);
+
+ }
+
+ .update{
+    background-color: rgb(142, 220, 90);
+    border-radius: 4px;
+
+
+ }
+ .update :hover{
+    background-color: rgb(71, 135, 46);
+
+ }

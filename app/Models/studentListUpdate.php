@@ -13,8 +13,9 @@ class studentListUpdate extends Model
     protected $table = 'users';
     protected $fillable = [
 
-        'program_id',
         'name',
+        'program_id',
+        
         'admission_no',
         'specialization',
         'year',

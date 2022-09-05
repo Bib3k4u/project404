@@ -1,4 +1,5 @@
 @include('layouts.app')
+<link rel="stylesheet" href="dist/css/projectcss/student_list.css">
 <div class="content-wrapper">
   <div class="row">
   <div class="col-md-12">
@@ -13,7 +14,7 @@
     <form class="row g-3" action="{{route('import_user')}}" enctype="multipart/form-data" method="post">
         @csrf
   <div class="col-auto">
-    <label class="visually-hidden">Email</label>
+    <label class="visually-hidden"><h4>Choose Excel File</h4></label>
     <input type="file" class="form-control" name="excel_file">
   </div>
  
@@ -25,10 +26,11 @@
   @enderror
 </form>
     </div>
+    <div class="mar">
     <div class="col-md-12">
-        user list
+        <h4>User List</h4>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 overflow-auto">
     <table class="table table-striped">
   <thead>
     <tr>
@@ -82,5 +84,6 @@
 </table>
     </div>
   </div>
+</div>
 </div>
 @include('layouts.footer')

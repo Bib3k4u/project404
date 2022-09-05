@@ -40,7 +40,7 @@ class update_program extends Controller
         $data->specialization = $req->specialization;
 
         $data->save();
-        return redirect('updateprogram')->with('success',"Data updted successfully");
+        return redirect('updateprogram')->with('success',"Data updated successfully");
     }
     
    
