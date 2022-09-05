@@ -1,0 +1,73 @@
+.containar{
+    margin-left:50px;
+    margin-right:50px;
+    
+ }
+  
+label{
+    font-size:24px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.form-group label, input{
+    display: block;
+}
+.form-group input{
+    width:70%;
+    height:35px;
+    font-size: larger;
+    font-weight: 500;
+}
+.row{
+    padding-top: 20px;
+}
+.table1{
+    overflow: auto !important;
+}
+table{
+    font-size:large;
+    
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 93%;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 80px;
+   
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+  }
+.sno{
+    width:70px;
+    padding-left: 5px;
+}
+.pid{
+    width:240px;
+    padding-left: 5px;
+}
+.pname{
+    width:450px;
+    padding-left: 5px;
+}
+.year{
+    width:140px;
+    padding-left: 5px;
+}
+.sem{
+   width: 140px;
+   padding-left: 5px;
+}
+.spec{
+    width:260px;
+    padding-left: 5px;
+}
+.action{
+    width:200px;
+    padding-left: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #d9f0f0;
+  }
