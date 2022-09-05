@@ -1,17 +1,7 @@
 @include('layouts.header')
 @include('layouts.sidebar')
+@include('script.update_program');
 <link rel="stylesheet" href="dist/css/projectcss/update_program.css">
-<!-- <style>
- .containar{
-    margin-left:50px;
-    margin-right:50px;
- }
-  
-label{
-    font-size:24px;
-}
-</style> -->
-
 
 <div class="content-wrapper">
     <div class="containar">

@@ -31,13 +31,13 @@ class update_program extends Controller
     // function validat(Request $req){
 
     //     $req->validate([
-    //         'program_id'=>'required',
+    //         'program_id'=>'required|unique:updateprogram',
     //         'program_name'=>'required',
     //         'year'=>'required',
     //         'semester'=>'required',
     //         'specialization'=>'required'
     //   ]);
-    //         return $req->input();
+      
     // }
   
 
