@@ -27,18 +27,23 @@ class update_program extends Controller
        
         return redirect('updateprogram');
     }
-    
-    // function validat(Request $req){
+    function edit($id){
+            $data  =  updateProgram::find($id);
+            return view('components.update_program_form',['updateProgram'=>$data]);
+        }
+    function update(Request $req){
+        $data = updateProgram::find($req->id);
+        $data->program_id = $req->program_id;
+        $data->program_name = $req->program_name;
+        $data->year = $req->year;
+        $data->semester = $req->semester;
+        $data->specialization = $req->specialization;
 
-    //     $req->validate([
-    //         'program_id'=>'required|unique:updateprogram',
-    //         'program_name'=>'required',
-    //         'year'=>'required',
-    //         'semester'=>'required',
-    //         'specialization'=>'required'
-    //   ]);
-      
-    // }
+        $data->save();
+        return redirect('updateprogram')->with('success',"Data updted successfully");
+    }
+    
+   
   
 
 }

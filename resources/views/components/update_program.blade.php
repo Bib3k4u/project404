@@ -66,7 +66,12 @@
             </div>
 
     </div>
-
+    @if (session('success'))
+<div class="alert alert-success" role="alert" id="alert">
+  {{session('success')}}
+</div>
+ 
+@endif
     <div class="table1">
 
 
@@ -92,6 +97,7 @@
                 <td>{{ $data['semester']  }}</td>
                 <td>{{ $data['specialization']  }}</td>
                 <td><a href={{ "updateprogram/" .$data['id'] }}>Delete</a>
+                <td><a href={{ "edit/" .$data['id'] }}>update</a>
             </tr>
             @endforeach
         </table>
@@ -176,12 +182,21 @@ $(document).ready(function () {
 
 
 
-
     </form>
 </div>
 </div>
 
-
+<script>
+//        setTimeout(function () {
+  
+//   // Closing the alert
+//   $('#alert').alert('close');
+// }, 3000);
+// 
+$("#alert").fadeTo(2000, 500).slideUp(500, function(){
+    $("#alert").slideUp(500);
+});
+</script>
 
 
 @include('layouts.footer')

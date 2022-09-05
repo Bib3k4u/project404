@@ -23,7 +23,8 @@ Route::view('updateprogram', 'components.update_program');
 Route::post('updateprogram', [update_program::class, 'addprogram']);
 Route::get('updateprogram', [update_program::class, 'show']);
 Route::get('updateprogram/{id}', [update_program::class, 'delete']);
-
+Route::get('edit/{id}', [update_program::class, 'edit']);
+Route::post('edit',[update_program::class,'update']);
 
 
 Route::get('/student_list', [Student_list_test::class, 'show']);
