@@ -15,7 +15,7 @@
                         <label for="program_ID">Program ID</label>
 
 
-                        <input type="text"  onblur="capitalize()" name="program_id" id="program_id">
+                        <input type="text" onblur="capitalize()" name="program_id" id="program_id">
                         <!-- <span>@error('program_id'){{$message}}@enderror</span> -->
                     </div>
                 </div>
@@ -30,7 +30,8 @@
 
                     <div class="form-group ">
                         <label for="specializatioin">Specialization</label>
-                        <input type="text" name="specialization" onblur="capitalize()"  id="specialization" onkeyup="lettersOnly(this)">
+                        <input type="text" name="specialization" onblur="capitalize()" id="specialization"
+                            onkeyup="lettersOnly(this)">
                     </div>
                 </div>
             </div>
@@ -67,17 +68,17 @@
 
     </div>
 
-    
+
 
 
     @if (session('success'))
-   <div id="alertbox" class="alert alert-success" role="alert">
-  <h4 class="alert-heading">Well done!</h4>
-  <p class="mb-0">{{session('success')}}</p>
-</div>
+    <div id="alertbox" class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p class="mb-0">{{session('success')}}</p>
+    </div>
 
 
-@endif
+    @endif
     <div class="table1">
 
 
@@ -93,7 +94,7 @@
 
             </tr>
 
-            
+
 
             @foreach($updateProgram as $data) <tr>
                 <td>{{$data['id']  }}</td>
@@ -102,14 +103,21 @@
                 <td>{{ $data['year'] }}</td>
                 <td>{{ $data['semester']  }}</td>
                 <td>{{ $data['specialization']  }}</td>
-                <div class="row">
-                    <div class="col-md-6">
-                <td><button class="delete"><a style="color:white" href={{ "updateprogram/" .$data['id'] }}>Delete</a></button>
-                <button class="update" style="margin-left:10px"><a style="color:white" href={{ "edit/" .$data['id'] }}>Update</a></button>
-            </td>
-            </div>
-                </div>
-                
+                <td>
+                    <div class="row">
+                        <div class="button-edit md-col-md-6">
+                            <button class="delete"><a style="color:white"
+                                    href={{ "updateprogram/" .$data['id'] }}>Delete</a></button>
+
+
+                        </div>
+                        <div class=" button-edit col-md-6">
+                            <button class="update"><a style="color:white"
+                                    href={{ "edit/" .$data['id'] }}>Update</a></button>
+                        </div>
+                    </div>
+                </td>
+
             </tr>
             @endforeach
         </table>
@@ -199,13 +207,13 @@ $(document).ready(function () {
 </div>
 
 <script>
-$("#alert").fadeTo(2000, 500).slideUp(500, function(){
+$("#alert").fadeTo(2000, 500).slideUp(500, function() {
     $("#alert").slideUp(500);
 });
 
 
-function capitalize(){
-  
+function capitalize() {
+
     var x = document.getElementById("program_id");
     x.value = x.value.toUpperCase();
     var y = document.getElementById("program_name");
@@ -214,55 +222,48 @@ function capitalize(){
     z.value = z.value.toUpperCase();
 }
 
-$('input[name="program_id"]').on('keypress',function(event){
+$('input[name="program_id"]').on('keypress', function(event) {
     var x = event.which || event.keyCode;
-    if((x>=65 && x<=90) || (x>=97 && x<=122) || (x>=48 && x<=57)){
+    if ((x >= 65 && x <= 90) || (x >= 97 && x <= 122) || (x >= 48 && x <= 57)) {
         return true;
-    }
-    else{
+    } else {
         return false;
     }
 });
 
-$('input[name="program_name"]').on('keypress',function(event){
+$('input[name="program_name"]').on('keypress', function(event) {
     var x = event.which || event.keyCode;
-    if((x>=65 && x<=90) || (x>=97 && x<=122) || x==32){
+    if ((x >= 65 && x <= 90) || (x >= 97 && x <= 122) || x == 32) {
         return true;
-    }
-    else{
+    } else {
         return false;
     }
 });
 
-$('input[name="specialization"]').on('keypress',function(event){
+$('input[name="specialization"]').on('keypress', function(event) {
     var x = event.which || event.keyCode;
-    if((x>=65 && x<=90) || (x>=97 && x<=122) || x==32){
+    if ((x >= 65 && x <= 90) || (x >= 97 && x <= 122) || x == 32) {
         return true;
-    }
-    else{
+    } else {
         return false;
     }
 });
-$('input[name="year"]').on('keypress',function(event){
+$('input[name="year"]').on('keypress', function(event) {
     var x = event.which || event.keyCode;
-    if((x>=48 && x<=57)){
+    if ((x >= 48 && x <= 57)) {
         return true;
-    }
-    else{
+    } else {
         return false;
     }
 });
-$('input[name="semester"]').on('keypress',function(event){
+$('input[name="semester"]').on('keypress', function(event) {
     var x = event.which || event.keyCode;
-    if((x>=48 && x<=57)){
+    if ((x >= 48 && x <= 57)) {
         return true;
-    }
-    else{
+    } else {
         return false;
     }
 });
-
-
 </script>
 
 

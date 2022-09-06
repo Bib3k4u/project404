@@ -21,15 +21,17 @@ label{
     padding-top: 20px;
 }
 .table1{
+    width: 94%;
+    margin:auto;
     overflow: auto !important;
 }
 table{
     font-size:large;
     
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    width: 90%;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 100% !important;
+    /* margin-left: 50px; */
+    /* margin-right: 50px; */
     margin-top: 80px;
    
 }
@@ -80,13 +82,16 @@ tr:nth-child(even) {
     margin-left: 400px;
 
   }
-  .editbutton{
+ 
+.button-edit{
+    margin: auto;
+    /* width: 100%; */
     display: flex;
-  }
-
+}
  .delete{
     background-color: rgb(223, 64, 64);
     border-radius: 4px;
+   
 
     
  }
@@ -98,6 +103,7 @@ tr:nth-child(even) {
  .update{
     background-color: rgb(142, 220, 90);
     border-radius: 4px;
+    
 
 
  }
