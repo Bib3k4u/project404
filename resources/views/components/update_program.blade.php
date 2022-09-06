@@ -15,14 +15,14 @@
                         <label for="program_ID">Program ID</label>
 
 
-                        <input type="text" name="program_id" id="program_id">
+                        <input type="text"  onblur="capitalize()" name="program_id" id="program_id">
                         <!-- <span>@error('program_id'){{$message}}@enderror</span> -->
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="Program_name">Program Name</label>
-                        <input type="text" name="program_name" id="program_name">
+                        <input type="text" name="program_name" onblur="capitalize()" id="program_name">
 
                     </div>
                 </div>
@@ -30,7 +30,7 @@
 
                     <div class="form-group ">
                         <label for="specializatioin">Specialization</label>
-                        <input type="text" name="specialization" id="specialization">
+                        <input type="text" name="specialization" onblur="capitalize()"  id="specialization" onkeyup="lettersOnly(this)">
                     </div>
                 </div>
             </div>
@@ -187,15 +187,70 @@ $(document).ready(function () {
 </div>
 
 <script>
-//        setTimeout(function () {
-  
-//   // Closing the alert
-//   $('#alert').alert('close');
-// }, 3000);
-// 
 $("#alert").fadeTo(2000, 500).slideUp(500, function(){
     $("#alert").slideUp(500);
 });
+
+
+function capitalize(){
+  
+    var x = document.getElementById("program_id");
+    x.value = x.value.toUpperCase();
+    var y = document.getElementById("program_name");
+    y.value = y.value.toUpperCase();
+    var z = document.getElementById("specialization");
+    z.value = z.value.toUpperCase();
+}
+
+$('input[name="program_id"]').on('keypress',function(event){
+    var x = event.which || event.keyCode;
+    if((x>=65 && x<=90) || (x>=97 && x<=122) || (x>=48 && x<=57)){
+        return true;
+    }
+    else{
+        return false;
+    }
+});
+
+$('input[name="program_name"]').on('keypress',function(event){
+    var x = event.which || event.keyCode;
+    if((x>=65 && x<=90) || (x>=97 && x<=122) || x==32){
+        return true;
+    }
+    else{
+        return false;
+    }
+});
+
+$('input[name="specialization"]').on('keypress',function(event){
+    var x = event.which || event.keyCode;
+    if((x>=65 && x<=90) || (x>=97 && x<=122) || x==32){
+        return true;
+    }
+    else{
+        return false;
+    }
+});
+$('input[name="year"]').on('keypress',function(event){
+    var x = event.which || event.keyCode;
+    if((x>=48 && x<=57)){
+        return true;
+    }
+    else{
+        return false;
+    }
+});
+$('input[name="semester"]').on('keypress',function(event){
+    var x = event.which || event.keyCode;
+    if((x>=48 && x<=57)){
+        return true;
+    }
+    else{
+        return false;
+    }
+});
+
+
 </script>
 
 

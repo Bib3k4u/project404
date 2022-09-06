@@ -1,35 +1,9 @@
-@include('layouts.app')
-<div class="content-wrapper">
-  <div class="row">
-  <div class="col-md-12">
-    @if(Session::has('success'))
-        <div class="alert alert-success" role="alert" id="alert">
-        {{Session::get('success')}}
-        </div>
-    @endif
+@include('layouts.header')
+@include('layouts.sidebar')
 
-  </div> 
-  <div class="col-md-12">
-    <form class="row g-3" action="{{route('import_user')}}" enctype="multipart/form-data" method="post">
-        @csrf
-  <div class="col-auto">
-    <label class="visually-hidden">Email</label>
-    <input type="file" class="form-control" name="excel_file">
-  </div>
- 
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">upload excel file</button>
-  </div>
-  @error('excel_file')
-  <span class="text-danger">{{$message}}</span>
-  @enderror
-</form>
-    </div>
-    <div class="col-md-12">
-        user list
-    </div>
-    <div class="col-md-12">
-    <table class="table table-striped">
+
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -80,14 +54,21 @@
   @endif
   </tbody>
 </table>
-    </div>
-  </div>
-</div>
 
 
-<script>
-$("#alert").fadeTo(2000, 500).slideUp(500, function(){
-    $("#alert").slideUp(500);
-});
-</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @include('layouts.footer')
