@@ -66,16 +66,22 @@
             </div>
 
     </div>
+
+    
+
+
     @if (session('success'))
-<div class="alert alert-success" role="alert" id="alert">
-  {{session('success')}}
+   <div id="alertbox" class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Well done!</h4>
+  <p class="mb-0">{{session('success')}}</p>
 </div>
- 
+
+
 @endif
     <div class="table1">
 
 
-        <table>
+        <table class="table table-striped">
             <tr>
                 <th class=" sno">S.NO.</th>
                 <th class="pid">Program_id</th>
@@ -96,8 +102,14 @@
                 <td>{{ $data['year'] }}</td>
                 <td>{{ $data['semester']  }}</td>
                 <td>{{ $data['specialization']  }}</td>
-                <td><a href={{ "updateprogram/" .$data['id'] }}>Delete</a>
-                <td><a href={{ "edit/" .$data['id'] }}>update</a>
+                <div class="row">
+                    <div class="col-md-6">
+                <td><button class="delete"><a style="color:white" href={{ "updateprogram/" .$data['id'] }}>Delete</a></button>
+                <button class="update" style="margin-left:10px"><a style="color:white" href={{ "edit/" .$data['id'] }}>Update</a></button>
+            </td>
+            </div>
+                </div>
+                
             </tr>
             @endforeach
         </table>
