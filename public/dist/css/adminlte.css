@@ -10701,6 +10701,7 @@ body,
 
 .layout-boxed .wrapper .main-sidebar {
   left: inherit;
+  
 }
 
 @supports not (-webkit-touch-callout: none) {
@@ -10757,6 +10758,7 @@ body,
 
 body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar {
   margin-top: calc(calc(2.93725rem + 1px) / -1);
+  
 }
 
 body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .sidebar {
@@ -11627,6 +11629,7 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 .layout-top-nav .wrapper .main-sidebar {
   bottom: inherit;
   height: inherit;
+  
 }
 
 .layout-top-nav .wrapper .content-wrapper,
@@ -11793,7 +11796,8 @@ body.sidebar-collapse:not(.sidebar-mini-xs):not(.sidebar-mini-md):not(.sidebar-m
 
 body:not(.layout-fixed) .main-sidebar {
   height: inherit;
-  min-height: 100%;
+
+  min-height: 100vh;
   position: absolute;
   top: 0;
 }
