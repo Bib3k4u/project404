@@ -22,7 +22,7 @@
 
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
-    <div class="wrapper">
+    <div style="overflow: hidden;position: fixed;top: 0;width: 100%" class="wrapper">
 
         <nav class="main-header navbar navbar-expand navbar-dark navbar-dark">
             <!-- Left navbar links -->

@@ -1,7 +1,7 @@
 @include('layouts.header')
 @include('layouts.sidebar')
 <link rel="stylesheet" href="dist/css/projectcss/student_list.css">
-<div class="content-wrapper">
+<div style="margin-top: 50px;" class="content-wrapper">
     <div class="row">
         <div class="col-md-12">
             @if(Session::has('success'))
