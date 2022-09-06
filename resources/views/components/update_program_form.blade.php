@@ -20,8 +20,6 @@
 </style>
 
 
-<<<<<<< HEAD
-=======
 
 <div class="container">
 <form action="/edit" method="POST">
@@ -98,7 +96,6 @@
 
 
 </form>
->>>>>>> fccfd4b2a82b5aefc67531e5fbec499c4de0b6be
 
 
 </div>
@@ -107,7 +104,7 @@
 
 
 
-<form action="/edit" method="POST" >
+<!-- <form action="/edit" method="POST" >
     @csrf
     <input type="hidden" name="id" value={{$updateProgram['id']}}>
                 <div class="card-body">
@@ -133,14 +130,14 @@
     <input type="text"  onblur="capitalize()" name="semester" id="semester" value={{$updateProgram['semester'] }}>
                 </div>
                 <!-- /.card-body -->
-
+<!-- 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Submit</button>
                   
                 </div>
 
 </div>
-              </form>
+              </form> --> 
 
 
 

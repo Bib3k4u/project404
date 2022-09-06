@@ -85,7 +85,6 @@
     </div>
   </div>
 </div>
-<<<<<<< HEAD
 
 
 <script>
@@ -93,8 +92,6 @@ $("#alert").fadeTo(2000, 500).slideUp(500, function(){
     $("#alert").slideUp(500);
 });
 </script>
-@include('layouts.footer')
-=======
+<!-- @include('layouts.footer') -->
 </div>
 @include('layouts.footer')
->>>>>>> fccfd4b2a82b5aefc67531e5fbec499c4de0b6be
