@@ -1,7 +1,13 @@
 @include('layouts.header')
 @include('layouts.sidebar')
 
+<div class="content-wrapper">
+<form action="/students_data" method="post">
+ @csrf
+ <input type="text" name="program_id">
+  <input type="submit" value="search">
 
+</form>
 
 <table class="table table-striped">
   <thead>
@@ -22,17 +28,14 @@
     </tr>
   </thead>
   <tbody>
-    @if(count($studentListUpdate))
    
+  @if(count($data1))
 
-      @foreach($studentListUpdate as $student_list)
+      @foreach($data1 as $student_list)
     <tr>
       <th scope="row">{{$student_list['id']  }}</th>
-      
-      <!-- <th scope="row">{{$student_list['email']  }}</th>
-      <th scope="row">{{$student_list['password']  }}</th> -->
       <td>{{ $student_list['program_id'] }}</td>
-      <th scope="row">{{$student_list['name']  }}</th>
+      <td>{{$student_list['name']  }}</td>
       <td>{{$student_list['admission_no'] }}</td>
       <td>{{ $student_list['specialization'] }}</td>
       <td>{{ $student_list['year']  }}</td>
@@ -47,9 +50,14 @@
       
       
     </tr>
-   @else
+    @else
   <tr>
-    <td colspan="3">No data found</td>
+    <td colspan="3"><div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>Data not found </strong> please try again
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div></td>
   </tr>
   @endif
   </tbody>
@@ -70,5 +78,5 @@
 
 
 
-
+</div>
 @include('layouts.footer')

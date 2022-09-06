@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Student_list_test;
 use App\Http\Controllers\Student_list_update;
 use App\Http\Controllers\update_program;
+use App\Http\Controllers\student_data;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +32,7 @@ Route::get('/student_list', [Student_list_test::class, 'show']);
 
 Route::get('/student_list_upload', [Student_list_update::class, 'upload']);
 Route::post('/import_user', [Student_list_update::class, 'import_user'])->name('import_user');
+
+
+Route::get('/students_data' ,[student_data::class,'show']);
+Route::post('/students_data',[student_data::class,'search']);

@@ -20,8 +20,8 @@
 </style>
 
 
-<<<<<<< HEAD
-=======
+
+
 
 <div class="container">
 <form action="/edit" method="POST">
@@ -39,7 +39,7 @@
   <label style="" for="program_id">Program Id</label>
   </div>
   <div class="col-md-6" offset-2>
-  <input type="text" name="program_id" id="" value={{$updateProgram['program_id'] }}>
+  <input type="text" name="program_id" id="program_id" value={{$updateProgram['program_id'] }}>
   </div>
 </div>
 
@@ -48,7 +48,7 @@
   <label style="" for="program_id">Program Name</label>
   </div>
   <div class="col-md-6" offset-2>
-  <input type="text" name="program_name" id="" value={{$updateProgram['program_name'] }}>
+  <input type="text" name="program_name" onblur="capitalize()" id="program_name" value={{$updateProgram['program_name'] }}>
   </div>
 </div>
 
@@ -57,7 +57,7 @@
   <label style="" for="program_id">Specialization</label>
   </div>
   <div class="col-md-6" offset-2>
-  <input type="text" name="specialization" id="" value={{$updateProgram['specialization'] }}>
+  <input type="text" name="specialization" id="specialization" onblur="capitalize()"  value={{$updateProgram['specialization'] }}>
 
   </div>
 </div>
@@ -68,7 +68,7 @@
   </div>
   <div class="col-md-6" offset-2>
   
-  <input type="text" name="year" id="" value={{$updateProgram['year'] }}>
+  <input type="text" name="year" id="year" onblur="capitalize()"  value={{$updateProgram['year'] }}>
   </div>
 </div>
 
@@ -80,7 +80,7 @@
   </div>
   <div class="col-md-6" offset-2>
 
-  <input type="text" name="semester" id="" value={{$updateProgram['semester'] }}>
+  <input type="text" name="semester" id="semester" onblur="capitalize()"  value={{$updateProgram['semester'] }}>
   </div>
 </div>
 <div class="form-group">
@@ -98,7 +98,6 @@
 
 
 </form>
->>>>>>> fccfd4b2a82b5aefc67531e5fbec499c4de0b6be
 
 
 </div>
@@ -107,44 +106,7 @@
 
 
 
-<form action="/edit" method="POST" >
-    @csrf
-    <input type="hidden" name="id" value={{$updateProgram['id']}}>
-                <div class="card-body">
-                  <div class="form-group">
-                    <label for="program_id">Program Id</label>
-                    <input type="text" onblur="capitalize()" name="program_id" id="program_id" value={{$updateProgram['program_id'] }}>
-                  </div>
-                  <div class="form-group">
-                  <label for="program_name">Program Name</label>
-                        <input type="text" onblur="capitalize()" name="program_name" id="program_name" value={{$updateProgram['program_name'] }}>
-                        
-                  </div>
-                  <div class="form-group">
-                  <label for="specialization">Specialization</label><label for="specialization">Specialization</label>
-                  <input type="text" onblur="capitalize()" name="specialization" id="specialization" value={{$updateProgram['specialization'] }}>
-                </div>
-                <div class="form-group">
-                <label for="year">Year</label>
-    <input type="text"  onblur="capitalize()" name="year" id="year" value={{$updateProgram['year'] }}>
-                </div>
-                <div class="form-group">
-                <label for="semester">semester</label>
-    <input type="text"  onblur="capitalize()" name="semester" id="semester" value={{$updateProgram['semester'] }}>
-                </div>
-                <!-- /.card-body -->
 
-                <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                  
-                </div>
-
-</div>
-              </form>
-
-
-
-</div>
 
 <script>
 
